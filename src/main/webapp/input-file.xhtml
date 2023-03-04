@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="jakarta.faces.core"
+    xmlns:h="jakarta.faces.html"
+    xmlns:ui="jakarta.faces.facelets"
+	template="/WEB-INF/templates/main.xhtml">
+
+	<ui:define name="main">
+		<h:form id="form" enctype="multipart/form-data">
+			<section>
+				<header>New attributes &lt;h:inputFile multiple="..." accept="..." /&gt; 
+					<a href="https://github.com/jakartaee/faces/issues/1555" target="_blank">(Issue #1555)</a>
+					and
+					<a href="https://github.com/jakartaee/faces/issues/1556" target="_blank">(Issue #1556)</a>
+				</header>
+				<h:inputFile value="#{fileUploader.files}" multiple="true" accept="image/png,application/pdf" />
+				<h:commandButton action="#{fileUploader.upload}" value="upload" />
+			</section>
+		</h:form>
+	</ui:define>
+
+</ui:composition>

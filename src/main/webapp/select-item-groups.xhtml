@@ -1,0 +1,22 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="jakarta.faces.core"
+    xmlns:h="jakarta.faces.html"
+    xmlns:ui="jakarta.faces.facelets"
+	template="/WEB-INF/templates/main.xhtml">
+
+	<ui:define name="main">
+		<h:form>
+			<section>
+				<header>New tag &lt;f:selectItemGroups&gt; 
+					<a href="https://github.com/jakartaee/faces/issues/1559" target="_blank">(Issue #1559) </a>
+				</header>
+				<h:selectOneMenu>
+					<f:selectItemGroups value="#{locales.localesFor('de', 'es', 'fr')}" var="languageLocales" itemLabel="#{languageLocales.key}">
+						<f:selectItems value="#{languageLocales.value}" var="locale" itemLabel="#{locale}" />
+					</f:selectItemGroups>
+				</h:selectOneMenu>
+			</section>
+		</h:form>
+	</ui:define>
+
+</ui:composition>

@@ -1,0 +1,20 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="jakarta.faces.core"
+                xmlns:h="jakarta.faces.html"
+                xmlns:ui="jakarta.faces.facelets"
+                template="/WEB-INF/templates/main.xhtml">
+
+    <ui:define name="main">
+        <h:form>
+            <section>
+                <header>Lifecycle</header>
+                <h:commandButton value="Submit page"/>
+                <br/>
+                <h:commandButton action="#{phaseListenerController.addPhaseListener}" value="Add phase listener"/>
+                <br/>
+                <h:commandButton action="#{phaseListenerController.removePhaseListener}" value="Remove phase listener"/>
+            </section>
+        </h:form>
+    </ui:define>
+
+</ui:composition>

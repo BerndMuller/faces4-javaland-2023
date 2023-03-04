@@ -1,0 +1,27 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="jakarta.faces.core"
+    xmlns:h="jakarta.faces.html"
+    xmlns:ui="jakarta.faces.facelets">
+
+	<nav class="nav">
+ 		<ul>
+		  	<li><a href="#{request.contextPath}/index.xhtml">Home</a></li>
+			<li class="dropdown">
+  				<a href="#" class="dropbtn">Features</a>
+  				<div class="dropdown-content">
+  					<a href="#{externalContext.applicationContextPath}/programmatic-facelet.xhtml">Programmatic Facelet (Issue #1581)</a>
+  					<a href="#{externalContext.applicationContextPath}/nonprogrammatic-facelet.xhtml">Non Programmatic Facelet (the old way)</a>
+  					<a href="#{externalContext.applicationContextPath}/client-window-scoped.xhtml" target="_blank">@ClientWindowScoped (Issue #1509)</a>
+  					<a href="#{externalContext.applicationContextPath}/select-item-groups.xhtml">&lt;f:selectItemGroups&gt; (Issue #1559) </a>
+  					<a href="#{externalContext.applicationContextPath}/select-item-group.xhtml">&lt;f:selectItemGroup&gt; (Issue #1563) </a>
+  					<a href="#{externalContext.applicationContextPath}/list-layout.xhtml">list layout for &lt;h:selectManyCheckbox&gt; and  &lt;h:selectOneRadio&gt; (Issue #1574) </a>
+  					<a href="#{externalContext.applicationContextPath}/lifecycle.xhtml">lifecycle (Issue #1557)</a>
+  					<a href="#{externalContext.applicationContextPath}/input-text-type.xhtml">&lt;h:inputText type="..."&gt;  (Issue #1560)</a>
+  					<a href="#{externalContext.applicationContextPath}/input-file.xhtml">&lt;h:inputdFileText multiple="..." accept="..."&gt;  (Issue #1555, #1556)</a>
+  				</div>
+  			</li>
+		</ul>
+	</nav>
+
+</ui:composition>

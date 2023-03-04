@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="jakarta.faces.html">
+
+	<h:body>
+		<h:form id="form">
+			<h:outputLabel value="Enter some text: " />
+			<h:inputText id="input" value="#{backingBean.text}" />
+			<h:commandButton id="button" value="Do action" action="#{backingBean.action}" />
+		</h:form>
+		<h:outputLink value="#{externalContext.applicationContextPath}/index.xhtml">back</h:outputLink>	
+	</h:body>
+
+</html>

@@ -1,0 +1,25 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="jakarta.faces.core"
+    xmlns:h="jakarta.faces.html"
+    xmlns:ui="jakarta.faces.facelets"
+	template="/WEB-INF/templates/main.xhtml">
+
+	<ui:define name="main">
+		<section>
+			This page has an associated backing bean annotated <code>@ClientWindowScoped</code>
+			namely <code>#{clientWindowScopedBean}</code>. It is associated with this tab and
+			has state value <code>#{clientWindowScopedBean.state}</code>. 
+			<br/>
+			<br/>
+			<h:button outcome="/client-window-scoped.xhtml" value="stay on this page" /> 
+			<br/>
+			<br/>
+			One has to activate client window scope with context parameter <code>jakarta.faces.CLIENT_WINDOW_MODE</code>.
+			Otherwise you will get this Weld error:			
+			<code>
+			  WELD-001303: No active contexts for scope type jakarta.faces.lifecycle.ClientWindowScoped
+			</code>
+		</section>
+	</ui:define>
+
+</ui:composition>
